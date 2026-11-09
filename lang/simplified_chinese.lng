@@ -1,8 +1,8 @@
 ##grflangid 0x56
 
 STR_GRF_NAME            :WINS 车站 {PUSH_COLOUR}{WHITE}{VERSION}{POP_COLOUR}
-STR_GRF_DESC            :WenSim 的车站包{}{}WINS 车站 {COPYRIGHT} 2024-2025 Jeremy Gao{}许可证：GPL v2
-STR_GRF_URL             :https://github.com/wensimehrp/jppluswins/
+STR_GRF_DESC            :wensim 的车站包{}{}WINS 车站 {COPYRIGHT} 2024-2025 Jeremy Gao{}许可证：GPL v2
+
 
 STR_JPP_TRACKS          :{PUSH_COLOUR}{GOLD}{PUSH_COLOUR}{WHITE}JP{POP_COLOUR}{PUSH_COLOUR}{RED}+{POP_COLOUR} 轨道 {JPP_TRACKS_VERSION} 或更高版本{POP_COLOUR}
 
@@ -10,7 +10,7 @@ STR_PARAM_FENCE_UNDERLAY_NAME   :栅栏草地底层
 STR_PARAM_FENCE_UNDERLAY_DESC   :{PUSH_COLOUR}{GOLD}自动：{POP_COLOUR}{}自动检测 NewGRF 与基本图形集设置，检索 OpenGFX2 与 OpenGFX+ landscapes 设置。默认情况下 OpenGFX2 优先级更高。{}{}{PUSH_COLOUR}{GOLD}JP+ 轨道：{POP_COLOUR}{}检测 JP+ 轨道设置。
 STR_PARAM_FENCE_UNDERLAY_0      :隐藏
 STR_PARAM_FENCE_UNDERLAY_1      :自动{PUSH_COLOUR}{BLUE}（推荐）{POP_COLOUR}
-STR_PARAM_FENCE_UNDERLAY_2      :JP+ 轨道
+STR_PARAM_FENCE_UNDERLAY_2      :使用 JP+ 轨道设置
 STR_PARAM_FENCE_UNDERLAY_3      :{PUSH_COLOUR}{GRAY}强制 OpenGFX2 温带{POP_COLOUR}
 STR_PARAM_FENCE_UNDERLAY_4      :{PUSH_COLOUR}{GRAY}强制 OpenGFX2 热带{POP_COLOUR}
 STR_PARAM_FENCE_UNDERLAY_5      :{PUSH_COLOUR}{GRAY}强制 OpenGFX2 寒带{POP_COLOUR}
@@ -32,6 +32,7 @@ STR_PARAM_FENCE_8               :草地
 
 STR_CLASS_WINS                  :WINS 车站 {PUSH_COLOUR}{WHITE}>>{POP_COLOUR} 站场
 STR_CLASS_FFWIN                 :WINS 路点 {PUSH_COLOUR}{WHITE}>>{POP_COLOUR} 基础
+STR_CLASS_FFWIB                 :WINS 路点 {PUSH_COLOUR}{WHITE}>>{POP_COLOUR} 假桥
 
 STR_STAT_DEFAULT                :车站
 STR_STAT_EMPTY                  :空车站
