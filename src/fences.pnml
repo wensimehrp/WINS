@@ -1,15 +1,16 @@
 // fence parameters, from JP+ Tracks
-const param_fence_offset = 26;
-const param_fence_old = 0;
-const param_fence_narrow_1 = 1;
-const param_fence_narrow_2 = 2;
-const param_fence_narrow_3 = 3;
-const param_fence_standard_1 = 4;
-const param_fence_standard_2 = 5;
-const param_fence_standard_3 = 6;
-const param_fence_shinkansen_1 = 7;
-const param_fence_shinkansen_2 = 8;
-const param_fence_ind = 9;
+// offset info:
+// https://github.com/OpenTTD-JPplus/JPplusTracks/blob/a8757db42da7ad97a5c10a377191b433be2b82a0/src/import/params.pnml#L317-L330
+const param_fence_old          = 27;
+const param_fence_narrow_1     = 28;
+const param_fence_narrow_2     = 29;
+const param_fence_narrow_3     = 30;
+const param_fence_standard_1   = 31;
+const param_fence_standard_2   = 32;
+const param_fence_standard_3   = 33;
+const param_fence_shinkansen_1 = 34;
+const param_fence_shinkansen_2 = 35;
+const param_fence_ind          = 36;
 
 // fences under tropical, temperate, and snowy climates
 switch(FEAT_STATIONS, SELF, _sw_fence_query_railtype, track_type){
@@ -83,16 +84,16 @@ switch(FEAT_STATIONS, SELF, _sw_fence_query_railtype, track_type){
 }
 
 switch(FEAT_STATIONS, SELF, _sw_fence, [
-    STORE_TEMP(param["YZ\AA\02", param_fence_offset + param_fence_old], param_fence_old),
-    STORE_TEMP(param["YZ\AA\02", param_fence_offset + param_fence_narrow_1], param_fence_narrow_1),
-    STORE_TEMP(param["YZ\AA\02", param_fence_offset + param_fence_narrow_2], param_fence_narrow_2),
-    STORE_TEMP(param["YZ\AA\02", param_fence_offset + param_fence_narrow_3], param_fence_narrow_3),
-    STORE_TEMP(param["YZ\AA\02", param_fence_offset + param_fence_standard_1], param_fence_standard_1),
-    STORE_TEMP(param["YZ\AA\02", param_fence_offset + param_fence_standard_2], param_fence_standard_2),
-    STORE_TEMP(param["YZ\AA\02", param_fence_offset + param_fence_standard_3], param_fence_standard_3),
-    STORE_TEMP(param["YZ\AA\02", param_fence_offset + param_fence_shinkansen_1], param_fence_shinkansen_1),
-    STORE_TEMP(param["YZ\AA\02", param_fence_offset + param_fence_shinkansen_2], param_fence_shinkansen_2),
-    STORE_TEMP(param["YZ\AA\02", param_fence_offset + param_fence_ind], param_fence_ind),
+    STORE_TEMP(param["YZ\AA\02", param_fence_old], param_fence_old),
+    STORE_TEMP(param["YZ\AA\02", param_fence_narrow_1], param_fence_narrow_1),
+    STORE_TEMP(param["YZ\AA\02", param_fence_narrow_2], param_fence_narrow_2),
+    STORE_TEMP(param["YZ\AA\02", param_fence_narrow_3], param_fence_narrow_3),
+    STORE_TEMP(param["YZ\AA\02", param_fence_standard_1], param_fence_standard_1),
+    STORE_TEMP(param["YZ\AA\02", param_fence_standard_2], param_fence_standard_2),
+    STORE_TEMP(param["YZ\AA\02", param_fence_standard_3], param_fence_standard_3),
+    STORE_TEMP(param["YZ\AA\02", param_fence_shinkansen_1], param_fence_shinkansen_1),
+    STORE_TEMP(param["YZ\AA\02", param_fence_shinkansen_2], param_fence_shinkansen_2),
+    STORE_TEMP(param["YZ\AA\02", param_fence_ind], param_fence_ind),
     _sw_fence_query_railtype(),
 ]){
     1: id_fence_hedge;
@@ -102,6 +103,13 @@ switch(FEAT_STATIONS, SELF, _sw_fence, [
     5: id_fence_mesh_low;
     6: id_fence_concrete;
     7: id_fence_concrete_2;
+    // JP+ Tracks "fence with grass" variants (8 = grass only)
+    8: none_code;
+    9: id_fence_hedge;
+    10: id_fence_wooden;
+    11: id_fence_wooden_white;
+    12: id_fence_mesh;
+    13: id_fence_mesh_low;
     none_code;
 }
 
