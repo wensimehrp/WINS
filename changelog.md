@@ -1,6 +1,12 @@
 # Changelog
 
+## 0.3.4 (Nov 8, 2026)
+
+- Version number bump only
+
 ## 0.3.3
+
+_Something wrong happened in this version_
 
 - Bumped JP+ Tracks requirement to 0.7.4
 
